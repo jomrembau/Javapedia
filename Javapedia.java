@@ -28,6 +28,23 @@ public class Javapedia {
         for (int x = 0; x< figuresTable.length; x++) {
             System.out.println(Arrays.toString(figuresTable[x]));
         }
+
+        System.out.println("\nWhose info do you need? ");
+        String person = scan.nextLine();
+
+        String pullInfo = "";
+        for (int p = 0; p < figuresTable.length; p++ ) {
+            if (figuresTable[p][0].toLowerCase().equals(person.toLowerCase())) {
+                pullInfo = figuresTable[p][0];
+                System.out.println(Arrays.toString(figuresTable[p]));
+                break;
+            } }
+
+        if (pullInfo.equals("")) {
+            System.out.println(person + " Not in Database.");
+            }
+            
         scan.close();
     }
 }
+    
